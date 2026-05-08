@@ -4,6 +4,8 @@ Client-side closed caption extractor for MP4 files.
 No file uploads — everything runs in the browser.
 
 > Written with Claude Pro 😊
+> 
+> ==LIVE==: https://mattmatic.github.io/cc-extractor/
 
 ## Files
 
