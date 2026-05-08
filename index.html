@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
   <!-- MP4Box.js browser build -->
   <script src="https://cdn.jsdelivr.net/npm/mp4box@0.5.2/dist/mp4box.all.min.js"></script>
-  <!--<script src="./dist/mp4box.all.min.js"></script>-->
 </head>
 <body>
   <div id="app">
@@ -35,7 +34,7 @@
           </div>
           <p class="drop-label">Drop <strong>.mp4</strong> file here</p>
           <p class="drop-sub">or</p>
-          <label class="btn-select" for="file-input">Browse File</label>
+          <button class="btn-select" id="btn-browse" type="button">Browse File</button>
           <input type="file" id="file-input" accept=".mp4,video/mp4" aria-label="Select MP4 file" />
         </div>
       </div>

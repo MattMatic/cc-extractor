@@ -138,6 +138,10 @@ h1 {
   border-radius: var(--radius);
   transition: background var(--transition), border-color var(--transition);
   margin-top: .4rem;
+  /* reset <button> UA styles */
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: normal;
 }
 .btn-select:hover {
   background: var(--amber-glow);

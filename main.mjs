@@ -63,7 +63,24 @@ dropZone.addEventListener('drop', (e) => {
   if (file) handleFile(file);
 });
 
-dropZone.addEventListener('click', () => fileInput.click());
+const btnBrowse = document.getElementById('btn-browse');
+
+// Browse button: sole owner of fileInput.click(). stopPropagation prevents
+// the event bubbling up to the dropZone listener, which would open a second
+// picker on Windows. On iOS, only a direct user-gesture click can open a
+// file picker — wiring it here (not via label[for]) satisfies that.
+btnBrowse.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+// dropZone click: handles clicks on the zone background and icon, but not
+// on the button (already handled above via stopPropagation).
+dropZone.addEventListener('click', (e) => {
+  if (e.target === btnBrowse) return;
+  fileInput.click();
+});
+
 dropZone.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
 });

@@ -5,7 +5,7 @@ No file uploads — everything runs in the browser.
 
 > Written with Claude Pro 😊
 > 
-> ==LIVE==: https://mattmatic.github.io/cc-extractor/
+> **LIVE**: https://mattmatic.github.io/cc-extractor/
 
 ## Files
 
